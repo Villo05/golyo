@@ -6,6 +6,7 @@ package main;
 
 import javax.swing.Icon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -62,6 +63,12 @@ public class Jatek extends javax.swing.JFrame {
 
         lblInstrukciok.setText("Válaszd ki az egyik oszlop legfelső elemét!");
 
+        btn1_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1_1ActionPerformed(evt);
+            }
+        });
+
         btn1_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/kek.png"))); // NOI18N
         btn1_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +87,12 @@ public class Jatek extends javax.swing.JFrame {
         btn1_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn1_4ActionPerformed(evt);
+            }
+        });
+
+        btn2_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2_1ActionPerformed(evt);
             }
         });
 
@@ -118,10 +131,22 @@ public class Jatek extends javax.swing.JFrame {
             }
         });
 
+        btn4_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4_1ActionPerformed(evt);
+            }
+        });
+
         btn3_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/kek.png"))); // NOI18N
         btn3_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn3_4ActionPerformed(evt);
+            }
+        });
+
+        btn3_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3_1ActionPerformed(evt);
             }
         });
 
@@ -358,6 +383,26 @@ public class Jatek extends javax.swing.JFrame {
         kivalasztottGomb = btn3_4;
         gombKezelo(kivalasztottGomb);
     }//GEN-LAST:event_btn3_4ActionPerformed
+
+    private void btn1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1_1ActionPerformed
+        felugro();
+
+    }//GEN-LAST:event_btn1_1ActionPerformed
+
+    private void btn2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2_1ActionPerformed
+        felugro();
+
+    }//GEN-LAST:event_btn2_1ActionPerformed
+
+    private void btn3_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3_1ActionPerformed
+        felugro();
+
+    }//GEN-LAST:event_btn3_1ActionPerformed
+
+    private void btn4_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4_1ActionPerformed
+        felugro();
+
+    }//GEN-LAST:event_btn4_1ActionPerformed
     
     
     private void gombKezelo (JButton kivalasztottGomb){
@@ -396,6 +441,10 @@ public class Jatek extends javax.swing.JFrame {
             aktiv = "";
             elozoGomb.setIcon(null);
         }
+    }
+    
+    private void felugro (){
+            JOptionPane.showMessageDialog(rootPane, "Ehhez a szinthez nem szükséges ez a gomb!", "Információ", JOptionPane.INFORMATION_MESSAGE);
     }
     /**
      * @param args the command line arguments
